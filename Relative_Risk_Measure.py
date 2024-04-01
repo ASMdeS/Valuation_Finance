@@ -23,7 +23,7 @@ def get_company_equity(ticker_symbol):
     return total_equity
 
 
-# Get the firs trading day of a stock
+# Get the first trading day of a stock
 def get_ipo_date(ticker_symbol):
     stock_data = yf.Ticker(ticker_symbol)
     history = stock_data.history(period="max").tz_localize(None)

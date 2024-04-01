@@ -28,6 +28,18 @@ def get_today_bovespa_value():
 # Call the function to get today's value of BOVESPA
 bovespa_today_value = get_today_bovespa_value()
 
+def get_arezzo_income_statement():
+    # Define the ticker symbol for Arezzo
+    ticker_symbol = "ARZZ3.SA"  # Arezzo's ticker symbol on BOVESPA
+
+    # Fetch Arezzo's data including cash flow using yfinance library
+    arezzo_data = yf.Ticker(ticker_symbol)
+
+    # Get cash flow statement
+    income_statement = arezzo_data.income_stmt
+
+    return income_statement
+
 def get_arezzo_cash_flow():
     # Define the ticker symbol for Arezzo
     ticker_symbol = "ARZZ3.SA"  # Arezzo's ticker symbol on BOVESPA
@@ -36,16 +48,28 @@ def get_arezzo_cash_flow():
     arezzo_data = yf.Ticker(ticker_symbol)
 
     # Get cash flow statement
-    balance_sheet_statement = arezzo_data.income_stmt
+    cash_flow_statement = arezzo_data.cash_flow
+
+    return cash_flow_statement
+
+def get_arezzo_balance_sheet():
+    # Define the ticker symbol for Arezzo
+    ticker_symbol = "ARZZ3.SA"  # Arezzo's ticker symbol on BOVESPA
+
+    # Fetch Arezzo's data including cash flow using yfinance library
+    arezzo_data = yf.Ticker(ticker_symbol)
+
+    # Get cash flow statement
+    balance_sheet_statement = arezzo_data.balance_sheet
 
     for index, row in balance_sheet_statement.iterrows():
         print(row)
 
     return balance_sheet_statement
 
-
 # Call the functions to get BOVESPA yearly returns and Arezzo's cash flow
-bovespa_returns = get_bovespa_daily_returns()
+# bovespa_returns = get_bovespa_daily_returns()
 arezzo_cash_flow = get_arezzo_cash_flow()
-
+#arezzo_income_statement = get_arezzo_income_statement()
 print(arezzo_cash_flow)
+print(arezzo_income_statement)
