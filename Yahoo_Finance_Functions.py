@@ -52,3 +52,13 @@ def get_today_value(ticker_symbol):
     today_price = bovespa_data.history(period="1d")["Close"].iloc[-1]
 
     return today_price
+
+
+# Get the number of stocks in the company
+def get_total_outstanding_shares(ticker_symbol):
+    stock_data = yf.Ticker(ticker_symbol)
+    company_profile = stock_data.info
+
+    total_shares_outstanding = company_profile.get('sharesOutstanding', None)
+
+    return total_shares_outstanding

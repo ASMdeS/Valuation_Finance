@@ -53,6 +53,3 @@ return_capital = (ebit_company * (1 - country_tax_rate)) / (
 expected_growth_net = retention_ratio * return_equity
 
 expected_growth_operating = reinvestment_rate * return_capital
-
-print(expected_growth_net)
-print(expected_growth_operating)

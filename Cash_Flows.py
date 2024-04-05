@@ -2,7 +2,7 @@
 from Yahoo_Finance_Functions import get_element_income_statement, get_element_cash_flow, get_element_balance_sheet
 
 # Importing the cost of equity
-from Cost_Debt_Capital import cost_equity, cost_debt
+from Cost_Debt_Capital import cost_debt
 
 # Importing the ticker and corporate tax rate
 from Company_and_Country import company_ticker, country_tax_rate
@@ -37,7 +37,4 @@ free_cash_flow_firm = ebit_company * (1 - country_tax_rate) - (
 
 # Calculate the free cash flow to equity of the company
 free_cash_flow_equity = net_income_company + capital_expenditure_company + depreciation_company + change_in_working_capital_company + (
-            debt_company * cost_debt)
-
-print(free_cash_flow_equity)
-print(free_cash_flow_firm)
+        debt_company * cost_debt)

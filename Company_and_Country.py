@@ -28,7 +28,7 @@ country_name = 'Brazil'
 equity_risk_premium = get_country_data(file_path, country_name, 'Equity Risk Premium')
 
 # Getting today's USA 10 year bond yield
-bond_yield = get_today_value("^TNX")
+bond_yield = get_today_value("^TNX") / 100
 
 # Getting the country's risk premium
 country_risk_premium = get_country_data(file_path, country_name, 'Country Risk Premium')
