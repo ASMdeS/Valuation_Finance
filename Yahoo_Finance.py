@@ -15,7 +15,7 @@ def get_bovespa_daily_returns():
 
 def get_today_bovespa_value():
     # Define the ticker symbol for BOVESPA
-    ticker_symbol = "^BVSP"
+    ticker_symbol = "^TNX"
 
     # Fetch data using yfinance
     bovespa_data = yf.Ticker(ticker_symbol)
@@ -69,7 +69,8 @@ def get_arezzo_balance_sheet():
 
 # Call the functions to get BOVESPA yearly returns and Arezzo's cash flow
 # bovespa_returns = get_bovespa_daily_returns()
+print(get_arezzo_balance_sheet())
 arezzo_cash_flow = get_arezzo_cash_flow()
-#arezzo_income_statement = get_arezzo_income_statement()
+arezzo_income_statement = get_arezzo_income_statement()
 print(arezzo_cash_flow)
 print(arezzo_income_statement)
