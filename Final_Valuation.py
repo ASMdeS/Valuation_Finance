@@ -72,9 +72,6 @@ fcfe_company_value += fcfe_terminal_value
 fcfe_stock_value = fcfe_company_value / total_outstanding_shares
 
 print(f'Valuation based on the FCFF discounted by the cost of capital: {fcff_company_value}')
-
 print(f'Price of share based on FCFF Valuation: {fcff_stock_value}')
-
 print(f'Valuation based on the FCFE discounted by the cost of equity: {fcfe_company_value}')
-
 print(f'Price of share based on FCFE Valuation: {fcfe_stock_value}')
