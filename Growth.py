@@ -35,7 +35,7 @@ debt_company = get_element_balance_sheet(company_ticker, 'Total Debt')
 cash_company = get_element_balance_sheet(company_ticker, 'Cash Financial')
 
 # Calculate the Retention Ratio of the Company
-retention_ratio = 1 - (dividends_company / net_income_company)
+retention_ratio = 1 - (-dividends_company / net_income_company)
 
 # Calculate the Return on Equity of the Company
 return_equity = net_income_company / (assets_company - liabilities_company)
